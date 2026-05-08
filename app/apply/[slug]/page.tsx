@@ -2,17 +2,16 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Navbar from "@/app/components/Navbar"
 import ApplyContent from "./ApplyContent"
-import guides from "@/data/apply-guides.json"
+import { getGuide, getAllSlugs } from "@/lib/sheets"
 
-type Slug = keyof typeof guides
-
-export function generateStaticParams() {
-  return Object.keys(guides).map(slug => ({ slug }))
+export async function generateStaticParams() {
+  const slugs = await getAllSlugs()
+  return slugs.map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const guide = guides[slug as Slug]
+  const guide = await getGuide(slug)
   if (!guide) return {}
   return {
     title: `${guide.title} 申請懶人包 — 補助優轉`,
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ApplyPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const guide = guides[slug as Slug]
+  const guide = await getGuide(slug)
   if (!guide) notFound()
 
   return (
