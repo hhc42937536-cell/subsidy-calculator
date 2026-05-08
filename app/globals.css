@@ -3,6 +3,20 @@
 :root {
   --background: #F8FAFC;
   --foreground: #0F172A;
+
+  --primary: #0F172A;
+  --primary-soft: #1E293B;
+
+  --accent: #10B981;
+  --accent-hover: #059669;
+
+  --card: #FFFFFF;
+  --border: #E2E8F0;
+
+  --muted: #64748B;
+  --success-bg: #ECFDF5;
+  --success-text: #047857;
+
   --font-body: var(--font-inter), var(--font-noto), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 

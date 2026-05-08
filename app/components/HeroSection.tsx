@@ -30,19 +30,15 @@ export default function HeroSection() {
                 <span style={{ fontSize: "12px", color: "#10B981", fontWeight: 500 }}>政府公開資料 × 每季同步更新</span>
               </div>
 
-              <h1 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1.15, marginBottom: "0.5rem", letterSpacing: "-0.04em" }}>
-                你每年可以多領
+              <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1.2, marginBottom: "1rem", letterSpacing: "-0.04em" }}>
+                找出你可能錯過的<br />政府補助
               </h1>
-              <h1 style={{ fontSize: "clamp(30px, 4.5vw, 52px)", fontWeight: 800, color: "#10B981", lineHeight: 1.15, marginBottom: "1.25rem", letterSpacing: "-0.04em" }}>
-                多少政府補助？
-              </h1>
-              <p style={{ fontSize: "16px", color: "#94A3B8", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "440px" }}>
-                根據你的生活情境，分析可申請的政府補助。<br />
-                從租屋、育兒、就業到企業，總金額一目瞭然。
+              <p style={{ fontSize: "15px", color: "#94A3B8", lineHeight: 1.8, marginBottom: "2rem", maxWidth: "420px" }}>
+                根據政府公開政策資料，快速比對你的身份、收入、居住狀態與家庭條件，估算每年可申請的補助與節稅金額。
               </p>
 
               {/* CTA */}
-              <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
                 <button style={{
                   background: "#10B981",
                   color: "white",
@@ -59,7 +55,24 @@ export default function HeroSection() {
                 }}>
                   開始試算我的補助 →
                 </button>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <a href="#personas" style={{
+                  color: "#94A3B8",
+                  fontSize: "14px",
+                  fontWeight: 500,
+                  textDecoration: "none",
+                  padding: "0 16px",
+                  height: "52px",
+                  display: "flex",
+                  alignItems: "center",
+                  border: "1px solid rgba(148,163,184,0.25)",
+                  borderRadius: "12px",
+                  whiteSpace: "nowrap",
+                  transition: "color .15s, border-color .15s",
+                }}>
+                  查看常見情境
+                </a>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <div style={{ display: "flex" }}>
                     {AVATAR_PREVIEW.map((a, i) => (
                       <div key={i} style={{
@@ -73,7 +86,6 @@ export default function HeroSection() {
                   </div>
                   <span style={{ fontSize: "13px", color: "#64748B" }}>已有 126,842 人試算</span>
                 </div>
-              </div>
             </div>
 
             {/* ── Right: mockup card ── */}
