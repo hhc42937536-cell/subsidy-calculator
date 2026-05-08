@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const AVATAR_PREVIEW = [
   { bg: "#7F77DD", char: "學" },
   { bg: "#378ADD", char: "勞" },
@@ -15,10 +17,9 @@ export default function CtaFooter() {
           免費試算，3 分鐘知道你能領多少。<br />無需註冊，不留個資。
         </p>
 
-        <button style={{
+        <Link href="/calculator" style={{
           background: "#10B981",
           color: "white",
-          border: "none",
           borderRadius: "14px",
           padding: "0 36px",
           height: "56px",
@@ -28,12 +29,12 @@ export default function CtaFooter() {
           letterSpacing: "-0.01em",
           boxShadow: "0 4px 24px rgba(16,185,129,0.4)",
           marginBottom: "1.5rem",
-          display: "block",
-          marginLeft: "auto",
-          marginRight: "auto",
+          display: "inline-flex",
+          alignItems: "center",
+          textDecoration: "none",
         }}>
           立即開始試算 →
-        </button>
+        </Link>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}>
           <div style={{ display: "flex" }}>

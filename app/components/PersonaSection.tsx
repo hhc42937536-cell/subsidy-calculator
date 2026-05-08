@@ -208,13 +208,17 @@ export default function PersonaSection() {
           {/* Chips */}
           <div style={{ fontSize: "12px", color: "#94A3B8", marginBottom: "8px" }}>你也是這種情況嗎？</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-            {displayChips.map(chip => (
-              <button key={chip} style={{
-                padding: "7px 14px", fontSize: "12px", borderRadius: "20px",
-                border: "1px solid #E2E8F0", background: "#F8FAFC", color: "#475569",
-                cursor: "pointer", transition: "all .15s",
-              }}>{chip}</button>
-            ))}
+            {displayChips.map((chip, i) => {
+              const personaId = !isOwner ? selected : "owner"
+              const href = i === 0 ? `/calculator?persona=${personaId}` : "/calculator"
+              return (
+                <Link key={chip} href={href} style={{
+                  padding: "7px 14px", fontSize: "12px", borderRadius: "20px",
+                  border: "1px solid #E2E8F0", background: "#F8FAFC", color: "#475569",
+                  textDecoration: "none", display: "inline-block",
+                }}>{chip}</Link>
+              )
+            })}
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 const AVATAR_PREVIEW = [
   { bg: "#7F77DD", char: "學" },
   { bg: "#378ADD", char: "勞" },
@@ -39,10 +41,9 @@ export default function HeroSection() {
 
               {/* CTA */}
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
-                <button style={{
+                <Link href="/calculator" style={{
                   background: "#10B981",
                   color: "white",
-                  border: "none",
                   borderRadius: "12px",
                   padding: "0 28px",
                   height: "52px",
@@ -52,9 +53,12 @@ export default function HeroSection() {
                   letterSpacing: "-0.01em",
                   whiteSpace: "nowrap",
                   boxShadow: "0 4px 20px rgba(16,185,129,0.35)",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
                 }}>
                   開始試算我的補助 →
-                </button>
+                </Link>
                 <a href="#personas" style={{
                   color: "#94A3B8",
                   fontSize: "14px",
