@@ -1,9 +1,16 @@
 import PersonaTabs from "@/app/components/PersonaTabs"
 
-const stats = [
-  { value: "200+", label: "政府補助項目" },
-  { value: "每季更新", label: "資料同步頻率" },
-  { value: "NT$9.6萬", label: "平均可領金額" },
+const trustItems = [
+  "即時更新政策資料",
+  "基於政府公開規則",
+  "無需註冊",
+  "免費使用",
+]
+
+const mockSubsidies = [
+  { name: "中央租金補貼", amount: "$72,000" },
+  { name: "租屋報稅扣除額", amount: "$6,000" },
+  { name: "節能家電補助", amount: "$5,000" },
 ]
 
 export default function Home() {
@@ -26,13 +33,13 @@ export default function Home() {
           補助優轉
         </span>
         <button style={{
-          background: "#2563EB",
-          color: "white",
+          background: "white",
+          color: "#0F172A",
           border: "none",
           borderRadius: "8px",
           padding: "6px 16px",
           fontSize: "13px",
-          fontWeight: 500,
+          fontWeight: 600,
           cursor: "pointer",
         }}>
           找我的補助
@@ -41,85 +48,153 @@ export default function Home() {
 
       {/* Hero */}
       <section style={{
-        background: "linear-gradient(180deg, #0F172A 0%, #111827 100%)",
-        padding: "3.5rem 1.5rem 3rem",
-        color: "white",
+        background: "linear-gradient(180deg, #0F172A 0%, #0B1F33 100%)",
+        padding: "4rem 1.5rem 4rem",
       }}>
-        <div style={{ maxWidth: "680px", margin: "0 auto" }}>
+        <div className="hero-inner">
 
-          {/* 資料來源 badge */}
-          <div style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px",
-            background: "rgba(22,163,74,0.15)",
-            border: "1px solid rgba(22,163,74,0.3)",
-            color: "#4ADE80",
-            fontSize: "12px",
-            fontWeight: 500,
-            padding: "4px 12px",
-            borderRadius: "20px",
-            marginBottom: "1.25rem",
-          }}>
-            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", display: "inline-block" }} />
-            資料來源：政府公開資料平台，每季同步
-          </div>
+          {/* Left */}
+          <div>
+            <div style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              background: "rgba(16,185,129,0.12)",
+              border: "1px solid rgba(16,185,129,0.25)",
+              color: "#34D399",
+              fontSize: "12px",
+              fontWeight: 500,
+              padding: "4px 12px",
+              borderRadius: "20px",
+              marginBottom: "1.25rem",
+            }}>
+              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#10B981", display: "inline-block" }} />
+              政府公開資料 × 每季同步
+            </div>
 
-          <h1 style={{
-            fontSize: "clamp(24px, 5vw, 34px)",
-            fontWeight: 600,
-            lineHeight: 1.3,
-            letterSpacing: "-0.02em",
-            marginBottom: "0.75rem",
-            color: "#F8FAFC",
-          }}>
-            你可能少領了數萬元
-            <br />
-            <span style={{ color: "#4ADE80" }}>政府補助</span>
-          </h1>
+            <h1 style={{
+              fontSize: "clamp(26px, 4vw, 38px)",
+              fontWeight: 700,
+              lineHeight: 1.25,
+              letterSpacing: "-0.025em",
+              color: "#F8FAFC",
+              marginBottom: "1rem",
+            }}>
+              即時計算政府補助
+              <br />
+              <span style={{ color: "#10B981" }}>與節省金額</span>
+            </h1>
 
-          <p style={{
-            fontSize: "15px",
-            color: "#94A3B8",
-            lineHeight: 1.6,
-            marginBottom: "1.75rem",
-            maxWidth: "480px",
-          }}>
-            選一個最像你的生活情境，30 秒看清楚你能領哪些補助、
-            總共多少錢，以及如何申請。
-          </p>
+            <p style={{
+              fontSize: "15px",
+              color: "#94A3B8",
+              lineHeight: 1.7,
+              marginBottom: "1.75rem",
+              maxWidth: "420px",
+            }}>
+              基於公開政策與最新補助規則，快速估算你的實際可申請金額。
+            </p>
 
-          <button style={{
-            background: "#2563EB",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            padding: "10px 24px",
-            fontSize: "14px",
-            fontWeight: 500,
-            cursor: "pointer",
-            marginBottom: "2.5rem",
-          }}>
-            找我的情境 →
-          </button>
-
-          {/* Stats */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1rem",
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            paddingTop: "1.5rem",
-          }}>
-            {stats.map((s) => (
-              <div key={s.label}>
-                <div style={{ fontSize: "20px", fontWeight: 700, color: "#4ADE80", marginBottom: "2px" }}>
-                  {s.value}
+            {/* Trust signals */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "2rem" }}>
+              {trustItems.map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#CBD5E1" }}>
+                  <span style={{ color: "#10B981", fontWeight: 700, fontSize: "14px" }}>✓</span>
+                  {item}
                 </div>
-                <div style={{ fontSize: "12px", color: "#64748B" }}>{s.label}</div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <button style={{
+              background: "white",
+              color: "#0F172A",
+              border: "none",
+              borderRadius: "12px",
+              padding: "0 28px",
+              height: "52px",
+              fontSize: "15px",
+              fontWeight: 600,
+              cursor: "pointer",
+              letterSpacing: "-0.01em",
+            }}>
+              找我的補助情境 →
+            </button>
           </div>
+
+          {/* Right — Dashboard mockup */}
+          <div className="hero-mockup">
+            <div style={{
+              background: "#FFFFFF",
+              border: "1px solid #E2E8F0",
+              borderRadius: "16px",
+              padding: "1.5rem",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
+            }}>
+              {/* Card header */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.25rem" }}>
+                <div>
+                  <div style={{ fontSize: "12px", color: "#64748B", marginBottom: "2px" }}>試算結果</div>
+                  <div style={{ fontSize: "14px", fontWeight: 600, color: "#0F172A" }}>志豪・租屋青年</div>
+                </div>
+                <span style={{
+                  background: "#ECFDF5",
+                  color: "#059669",
+                  fontSize: "11px",
+                  fontWeight: 600,
+                  padding: "3px 8px",
+                  borderRadius: "6px",
+                }}>符合資格</span>
+              </div>
+
+              {/* Subsidy items */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "1.25rem" }}>
+                {mockSubsidies.map((sub) => (
+                  <div key={sub.name} style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "10px 12px",
+                    background: "#F8FAFC",
+                    border: "1px solid #E2E8F0",
+                    borderRadius: "8px",
+                  }}>
+                    <span style={{ fontSize: "13px", color: "#475569" }}>{sub.name}</span>
+                    <span style={{ fontSize: "13px", fontWeight: 600, color: "#059669" }}>{sub.amount}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Total */}
+              <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "12px 14px",
+                background: "#0F172A",
+                borderRadius: "10px",
+                marginBottom: "1rem",
+              }}>
+                <span style={{ fontSize: "13px", color: "#94A3B8", fontWeight: 500 }}>每年可領 / 省下</span>
+                <span style={{ fontSize: "22px", fontWeight: 700, color: "#10B981" }}>$78,000+</span>
+              </div>
+
+              <button style={{
+                width: "100%",
+                background: "#0F172A",
+                color: "white",
+                border: "none",
+                borderRadius: "10px",
+                padding: "10px",
+                fontSize: "13px",
+                fontWeight: 600,
+                cursor: "pointer",
+                letterSpacing: "-0.01em",
+              }}>
+                查看申請方式 →
+              </button>
+            </div>
+          </div>
+
         </div>
       </section>
 
