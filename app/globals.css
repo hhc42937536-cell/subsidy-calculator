@@ -20,15 +20,14 @@
 }
 
 body {
-  background: #f9f9f7;
-  color: #1a1a18;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  padding: 2rem 1rem;
+  background: #F8FAFC;
+  color: #1E293B;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.wrap { max-width: 680px; margin: 0 auto; padding: 1rem 0 2.5rem; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
 
 .intro { margin-bottom: 1.5rem; }
 .intro-headline { font-size: 22px; font-weight: 500; color: #1a1a18; margin-bottom: .4rem; line-height: 1.4; }
@@ -51,7 +50,7 @@ body {
 .story strong { color: #1a1a18; font-weight: 500; }
 
 .subsidy-list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 1.25rem; }
-.s-item { display: flex; align-items: center; gap: 12px; padding: 10px 13px; border: 0.5px solid #e0dfd8; border-radius: 8px; background: #fff; }
+.s-item { display: flex; align-items: center; gap: 12px; padding: 10px 13px; border: 1px solid #E2E8F0; border-radius: 8px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
 .s-bar { width: 3px; border-radius: 2px; align-self: stretch; flex-shrink: 0; }
 .s-body { flex: 1; }
 .s-name { font-size: 13px; font-weight: 500; color: #1a1a18; margin-bottom: 1px; }
