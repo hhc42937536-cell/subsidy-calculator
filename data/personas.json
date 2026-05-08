@@ -12,7 +12,7 @@
     ],
     "story": "小雅在台北念大學，租一間雅房每月 $8,000。她知道有「原住民獎助學金」，但不知道自己光靠租屋和身份，其實每年可以多領超過 <strong>8 萬元</strong>，其中大部分只要報稅時填對欄位就好。",
     "subsidies": [
-      { "barColor": "#378ADD", "name": "中央租金補貼", "how": "租屋中、年滿18歲、無自有住宅 → 內政部線上申請", "amount": "$54,000/年", "amtColor": "#16A34A" },
+      { "barColor": "#378ADD", "name": "中央租金補貼", "how": "租屋中、年滿18歲、無自有住宅 → 內政部線上申請", "amount": "$54,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
       { "barColor": "#7F77DD", "name": "原住民大專獎助學金", "how": "有原民身份、就讀大專院校 → 透過學校申請", "amount": "$20,000/年", "amtColor": "#16A34A" },
       { "barColor": "#EF9F27", "name": "租屋租金報稅扣除額", "how": "租屋自住、5月報稅時申報 → 最高扣除 $120,000", "amount": "省 $6,000/年", "amtColor": "#16A34A" }
     ],
@@ -52,7 +52,7 @@
     ],
     "story": "佳佳剛生完第一胎，在台中租屋。她知道有「生育津貼」，但不知道 2026 年新制之後，中央加地方加租屋加碼，第一年可以拿到將近 <strong>15 萬元</strong>。",
     "subsidies": [
-      { "barColor": "#16A34A", "name": "中央生育給付 PLUS（2026 新制）", "how": "每胎保底 $100,000，不分投保 → 勞保局線上申請", "amount": "$100,000", "amtColor": "#16A34A" },
+      { "barColor": "#16A34A", "name": "中央生育給付 PLUS（2026 新制）", "how": "每胎保底 $100,000，不分投保 → 勞保局線上申請", "amount": "$100,000", "amtColor": "#16A34A", "applyPath": "/apply/birth-subsidy" },
       { "barColor": "#7F77DD", "name": "台中市生育津貼", "how": "設籍台中、連續設籍滿半年 → 戶籍地區公所", "amount": "$20,000", "amtColor": "#16A34A" },
       { "barColor": "#D4537E", "name": "婚育租屋加碼（2026 新制）", "how": "結婚未滿 2 年、租屋中 → 租金補貼加碼 50%", "amount": "$36,000/年", "amtColor": "#16A34A" }
     ],
@@ -72,9 +72,9 @@
     ],
     "story": "志豪在台北單身租屋，月薪 $42,000，沒有小孩也沒有特殊身份。他以為自己「沒資格領任何補助」。但光是租屋這個條件，每年就有 <strong>7 萬元</strong>的補貼和節稅空間完全沒有用到。",
     "subsidies": [
-      { "barColor": "#378ADD", "name": "中央租金補貼（台北市）", "how": "無自有住宅、所得符合門檻 → 內政部線上申請", "amount": "最高 $72,000/年", "amtColor": "#16A34A" },
+      { "barColor": "#378ADD", "name": "中央租金補貼（台北市）", "how": "無自有住宅、所得符合門檻 → 內政部線上申請", "amount": "最高 $72,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
       { "barColor": "#EF9F27", "name": "租屋報稅扣除額", "how": "租屋自住 → 5月申報最高扣除 $120,000", "amount": "省 $6,000/年", "amtColor": "#16A34A" },
-      { "barColor": "#639922", "name": "節能家電補助（若換冷氣）", "how": "購買一級節能冷氣 → 線上申請最高退 $5,000", "amount": "最高 $5,000", "amtColor": "#16A34A" }
+      { "barColor": "#639922", "name": "節能家電補助（若換冷氣）", "how": "購買一級節能冷氣 → 線上申請最高退 $5,000", "amount": "最高 $5,000", "amtColor": "#16A34A", "applyPath": "/apply/energy-appliance" }
     ],
     "total": { "bg": "#FBEAF0", "labelColor": "#72243E", "label": "志豪每年可多領 / 省下", "amount": "$78,000+" },
     "chips": ["我跟志豪很像，幫我整理申請方式", "我在其他縣市租屋"]

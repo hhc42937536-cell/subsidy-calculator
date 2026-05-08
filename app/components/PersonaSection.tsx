@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import personas from "@/data/personas.json"
 import ownerData from "@/data/owner-data.json"
 
@@ -180,6 +181,11 @@ export default function PersonaSection() {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: "13px", fontWeight: 500, color: "#0F172A" }}>{sub.name}</div>
                   <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "2px" }}>{sub.how}</div>
+                  {(sub as unknown as { applyPath?: string }).applyPath && (
+                    <Link href={(sub as unknown as { applyPath: string }).applyPath} style={{ fontSize: "11px", color: "#10B981", fontWeight: 600, textDecoration: "none", display: "inline-block", marginTop: "4px" }}>
+                      申請懶人包 →
+                    </Link>
+                  )}
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "3px", flexShrink: 0 }}>
                   <span style={{ fontSize: "13px", fontWeight: 700, color: "#059669" }} className="tabular">{sub.amount}</span>
