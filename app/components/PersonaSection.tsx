@@ -8,6 +8,12 @@ import ownerData from "@/data/owner-data.json"
 type PersonaId = (typeof personas)[number]["id"] | "owner"
 type IndustryKey = keyof typeof ownerData.data
 
+const PERSONA_CATEGORY: Record<string, string> = {
+  student: "學生", worker: "就業", newparent: "育兒",
+  renter: "租屋", elder: "長者", unemployed: "失業",
+  disabled: "身障", lowincome: "低收入", startup: "創業",
+}
+
 const ALL_PERSONAS = [
   ...personas.map(p => ({
     id: p.id as PersonaId,
@@ -20,18 +26,22 @@ const ALL_PERSONAS = [
     subsidies: p.subsidies,
     total: p.total,
     chips: p.chips,
-    category: p.id === "elder" ? "長者" : p.id === "newparent" ? "育兒" : p.id === "student" ? "學生" : p.id === "worker" ? "就業" : "租屋",
+    category: PERSONA_CATEGORY[p.id] ?? "其他",
   })),
 ]
 
 function CategoryBadge({ label }: { label: string }) {
   const colors: Record<string, { bg: string; color: string }> = {
-    學生: { bg: "#EEEDFE", color: "#3C3489" },
-    就業: { bg: "#E6F1FB", color: "#0C447C" },
-    育兒: { bg: "#E1F5EE", color: "#085041" },
-    租屋: { bg: "#FBEAF0", color: "#72243E" },
-    長者: { bg: "#FAEEDA", color: "#633806" },
-    企業主: { bg: "#FAECE7", color: "#712B13" },
+    學生:  { bg: "#EEEDFE", color: "#3C3489" },
+    就業:  { bg: "#E6F1FB", color: "#0C447C" },
+    育兒:  { bg: "#E1F5EE", color: "#085041" },
+    租屋:  { bg: "#FBEAF0", color: "#72243E" },
+    長者:  { bg: "#FAEEDA", color: "#633806" },
+    企業主:{ bg: "#FAECE7", color: "#712B13" },
+    失業:  { bg: "#E6F1FB", color: "#185FA5" },
+    身障:  { bg: "#EEEDFE", color: "#534AB7" },
+    低收入:{ bg: "#FAEEDA", color: "#854F0B" },
+    創業:  { bg: "#FAECE7", color: "#993C1D" },
   }
   const c = colors[label] ?? { bg: "#F1F5F9", color: "#475569" }
   return (

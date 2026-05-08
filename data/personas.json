@@ -80,6 +80,87 @@
     "chips": ["我跟志豪很像，幫我整理申請方式", "我在其他縣市租屋"]
   },
   {
+    "id": "unemployed",
+    "tab": "小傑・剛失業",
+    "dotColor": "#378ADD",
+    "avatar": { "char": "職", "bg": "#E6F1FB", "color": "#185FA5" },
+    "name": "小傑，30 歲，台北市",
+    "tags": [
+      { "text": "非自願離職", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "勞保年資 4 年", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "求職中", "bg": "#FBEAF0", "color": "#72243E" }
+    ],
+    "story": "小傑剛被公司資遣，月薪 $38,000，已繳勞保 4 年。他慌著找工作，完全不知道失業期間政府提供的補助比他想像的還多，光失業給付就可以撐 <strong>6 個月以上</strong>，還有免費職訓課程。",
+    "subsidies": [
+      { "barColor": "#378ADD", "name": "勞保失業給付", "how": "非自願離職、有勞保年資 → 向就業服務站求職登記後申請", "amount": "月薪 60%×6 個月", "amtColor": "#16A34A", "applyPath": "/apply/unemployment-benefit" },
+      { "barColor": "#7F77DD", "name": "職業訓練生活津貼", "how": "失業期間參加全日制職訓 → 津貼延長至訓練完成", "amount": "月薪 60%（最長 2 年）", "amtColor": "#16A34A", "applyPath": "/apply/vocational-training" },
+      { "barColor": "#16A34A", "name": "就業促進津貼", "how": "就服站推介就業 → 再就業補助、搬遷補助", "amount": "最高 $36,000", "amtColor": "#16A34A", "applyPath": "/apply/employment-promotion" }
+    ],
+    "total": { "bg": "#E6F1FB", "labelColor": "#0C447C", "label": "小傑失業期間可領 / 省下", "amount": "$136,800+" },
+    "chips": ["我跟小傑很像，幫我整理申請方式", "我是自願離職，還有補助可以領嗎"]
+  },
+  {
+    "id": "disabled",
+    "tab": "惠君・身心障礙",
+    "dotColor": "#7F77DD",
+    "avatar": { "char": "障", "bg": "#EEEDFE", "color": "#534AB7" },
+    "name": "惠君，45 歲，台中市",
+    "tags": [
+      { "text": "肢體障礙", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "中低收入", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "有工作", "bg": "#E1F5EE", "color": "#085041" }
+    ],
+    "story": "惠君持有肢體障礙手冊，目前有在工作但月收偏低。她只知道每月有生活補助，但其實輪椅等輔具可以幾乎免費申請，加上健保補助，一年可以省下超過 <strong>20 萬元</strong>的費用。",
+    "subsidies": [
+      { "barColor": "#7F77DD", "name": "身心障礙者生活補助", "how": "中低收入戶、有身障手冊 → 戶籍地區公所申請", "amount": "最高 $84,912/年", "amtColor": "#16A34A", "applyPath": "/apply/disability-allowance" },
+      { "barColor": "#378ADD", "name": "身障輔具費用補助", "how": "醫師評估需求 → 衛福部輔具補助", "amount": "輪椅等依項目補助", "amtColor": "#16A34A", "applyPath": "/apply/assistive-devices" },
+      { "barColor": "#16A34A", "name": "身障居家照顧服務", "how": "社會局評估 → 居家服務員到府協助", "amount": "每月服務時數補助", "amtColor": "#16A34A", "applyPath": "/apply/disability-home-care" }
+    ],
+    "total": { "bg": "#EEEDFE", "labelColor": "#3C3489", "label": "惠君每年可多領 / 省下", "amount": "$200,000+" },
+    "chips": ["我跟惠君很像，幫我整理申請方式", "我的家人有身障需求，如何幫他申請"]
+  },
+  {
+    "id": "lowincome",
+    "tab": "志明・低收入戶",
+    "dotColor": "#EF9F27",
+    "avatar": { "char": "扶", "bg": "#FAEEDA", "color": "#854F0B" },
+    "name": "志明，50 歲，高雄市",
+    "tags": [
+      { "text": "低收入戶", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "有 2 個小孩", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "租屋中", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "志明一家四口，收入不穩，符合低收入戶資格。他只知道有生活扶助，但其實健保費、孩子學費、食物物資、急難救助，加起來每年可以獲得超過 <strong>40 萬元</strong>的補助和免費服務。",
+    "subsidies": [
+      { "barColor": "#EF9F27", "name": "低收入戶生活扶助", "how": "全家收入符合標準 → 戶籍地區公所申請", "amount": "$13,688/人/月", "amtColor": "#16A34A", "applyPath": "/apply/living-assistance" },
+      { "barColor": "#16A34A", "name": "食物銀行與物資補助", "how": "低收入戶或急難家庭 → 社會局或家扶中心", "amount": "食物箱、生活用品（實物）", "amtColor": "#16A34A", "applyPath": "/apply/food-bank" },
+      { "barColor": "#7F77DD", "name": "低收入戶就學補助", "how": "子女在學 → 學校學務處辦理，學費全免", "amount": "學費全免 + 助學金", "amtColor": "#16A34A", "applyPath": "/apply/low-income-education" },
+      { "barColor": "#D85A30", "name": "急難救助", "how": "突發困難時 → 社會局快速審核", "amount": "最高 $30,000（一次性）", "amtColor": "#16A34A", "applyPath": "/apply/emergency-assistance" }
+    ],
+    "total": { "bg": "#FAEEDA", "labelColor": "#633806", "label": "志明家庭每年可獲得的補助", "amount": "$400,000+" },
+    "chips": ["我家符合低收入戶，該怎麼申請", "我只是暫時有困難，不是低收入戶"]
+  },
+  {
+    "id": "startup",
+    "tab": "雅雯・準創業家",
+    "dotColor": "#D85A30",
+    "avatar": { "char": "創", "bg": "#FAECE7", "color": "#993C1D" },
+    "name": "雅雯，28 歲，台北市",
+    "tags": [
+      { "text": "準備創業", "bg": "#FAECE7", "color": "#712B13" },
+      { "text": "有產品想法", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "需要啟動資金", "bg": "#E1F5EE", "color": "#085041" }
+    ],
+    "story": "雅雯有一個創業想法，但苦無資金。她不知道政府有青年創業貸款利率比銀行低很多，加上育成補助和創業加速器，光是前期補助和低利貸款就可以拿到超過 <strong>100 萬元</strong>的支援。",
+    "subsidies": [
+      { "barColor": "#D85A30", "name": "青年創業及啟動金貸款", "how": "20–45 歲、有創業計畫 → 完成輔導課程後申請", "amount": "最高 $200萬低利貸款", "amtColor": "#16A34A", "applyPath": "/apply/youth-startup-loan" },
+      { "barColor": "#D4537E", "name": "微型創業鳳凰計畫", "how": "45 歲以上或特定族群 → 補助 $10 萬 + 低利貸款", "amount": "$100,000 補助（不還款）", "amtColor": "#16A34A", "applyPath": "/apply/micro-enterprise-phoenix" },
+      { "barColor": "#7F77DD", "name": "創業加速器與育成補助", "how": "有創新技術/商業模式 → 申請進駐育成中心", "amount": "最高 $50萬 + 免費資源", "amtColor": "#16A34A", "applyPath": "/apply/startup-accelerator" }
+    ],
+    "total": { "bg": "#FAECE7", "labelColor": "#712B13", "label": "雅雯創業可獲得的資源", "amount": "$1,000,000+" },
+    "chips": ["我跟雅雯很像，幫我整理申請方式", "我想了解創業補助，但還沒有公司"]
+  },
+  {
     "id": "elder",
     "tab": "阿嬤・65歲長者",
     "dotColor": "#EF9F27",

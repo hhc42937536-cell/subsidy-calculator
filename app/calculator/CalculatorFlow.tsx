@@ -16,11 +16,16 @@ const CATEGORY_COLORS: Record<string, { bg: string; color: string }> = {
   租屋:  { bg: "#FBEAF0", color: "#72243E" },
   長者:  { bg: "#FAEEDA", color: "#633806" },
   企業主:{ bg: "#FAECE7", color: "#712B13" },
+  失業:  { bg: "#E6F1FB", color: "#185FA5" },
+  身障:  { bg: "#EEEDFE", color: "#534AB7" },
+  低收入:{ bg: "#FAEEDA", color: "#854F0B" },
+  創業:  { bg: "#FAECE7", color: "#993C1D" },
 }
 
 const PERSONA_CATEGORY: Record<string, string> = {
   student: "學生", worker: "就業", newparent: "育兒",
   renter: "租屋", elder: "長者", owner: "企業主",
+  unemployed: "失業", disabled: "身障", lowincome: "低收入", startup: "創業",
 }
 
 function CategoryBadge({ label }: { label: string }) {
