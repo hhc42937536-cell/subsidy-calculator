@@ -73,9 +73,13 @@ body {
 .sel-group select { padding: 6px 10px; font-size: 12px; border-radius: 8px; border: 0.5px solid #ccc; background: #fff; color: #1a1a18; cursor: pointer; }
 
 /* Hero layout */
-.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+.hero-inner { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
 .hero-mockup { display: none; }
 @media (min-width: 768px) {
-  .hero-inner { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+  .hero-inner { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
   .hero-mockup { display: block; }
 }
+
+/* Trust bar */
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
