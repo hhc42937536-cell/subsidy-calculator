@@ -15,49 +15,49 @@
     "製造業": {
       "story": "老闆開一家小製造廠，員工 8 人，每年忙著跑訂單沒時間看公告。他知道 SBIR 但覺得很難申請，其實還有數位轉型和節能補助完全符合，加起來一年可以拿回超過 <strong>50 萬元</strong>的研發費用。",
       "subsidies": [
-        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "製造業、成立未滿10年、有研發計畫 → sbir.org.tw", "amount": "最高 $100萬/年" },
-        { "barColor": "#639922", "name": "節能設備補助", "how": "汰換節能設備 → 經濟部線上申請", "amount": "依項目不同" },
-        { "barColor": "#378ADD", "name": "數位轉型補助", "how": "導入數位工具、ERP、AI → ida.gov.tw", "amount": "最高 $50萬" }
+        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "製造業、成立未滿10年、有研發計畫 → sbir.org.tw", "amount": "最高 $100萬/年", "applyPath": "/apply/sbir" },
+        { "barColor": "#639922", "name": "節能設備補助", "how": "汰換節能設備 → 經濟部線上申請", "amount": "依項目不同", "applyPath": "/apply/energy-equipment" },
+        { "barColor": "#378ADD", "name": "數位轉型補助", "how": "導入數位工具、ERP、AI → ida.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/digital-transform" }
       ]
     },
     "服務業": {
       "story": "老闆開一家服務業公司，員工不多，覺得補助是「大公司的事」。其實服務業一樣可以申請 SBIR、數位轉型補助，加上地方產業獎勵，一年可爭取到 <strong>30 萬元以上</strong>。",
       "subsidies": [
-        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "服務業含資訊、設計、顧問 → sbir.org.tw", "amount": "最高 $100萬/年" },
-        { "barColor": "#378ADD", "name": "數位轉型補助", "how": "導入數位工具、電商、CRM → ida.gov.tw", "amount": "最高 $50萬" },
+        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "服務業含資訊、設計、顧問 → sbir.org.tw", "amount": "最高 $100萬/年", "applyPath": "/apply/sbir" },
+        { "barColor": "#378ADD", "name": "數位轉型補助", "how": "導入數位工具、電商、CRM → ida.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/digital-transform" },
         { "barColor": "#7F77DD", "name": "地方產業創新研發推動計畫", "how": "各縣市產業局申請", "amount": "額外加碼" }
       ]
     },
     "軟體／資訊": {
       "story": "老闆開軟體公司，以為補助都是給製造業的。其實軟體業是 SBIR 和數位補助的主要受益產業，加上 AI 相關研發補助，一年可以申請到 <strong>80 萬元以上</strong>。",
       "subsidies": [
-        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "軟體、AI、SaaS 均適用 → sbir.org.tw", "amount": "最高 $100萬/年" },
-        { "barColor": "#378ADD", "name": "AI 應用研發補助（產業發展署）", "how": "AI 產品開發 → ida.gov.tw", "amount": "最高 $50萬" },
-        { "barColor": "#7F77DD", "name": "科技部小產學計畫", "how": "與大學合作研發 → nstc.gov.tw", "amount": "最高 $50萬" }
+        { "barColor": "#D85A30", "name": "SBIR 小型企業創新研發補助", "how": "軟體、AI、SaaS 均適用 → sbir.org.tw", "amount": "最高 $100萬/年", "applyPath": "/apply/sbir" },
+        { "barColor": "#378ADD", "name": "AI 應用研發補助（產業發展署）", "how": "AI 產品開發 → ida.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/digital-transform" },
+        { "barColor": "#7F77DD", "name": "科技部小產學計畫", "how": "與大學合作研發 → nstc.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/nstc-industry-academia" }
       ]
     },
     "餐飲業": {
       "story": "老闆開一家餐廳，以為補助跟餐飲業無關。其實數位點餐、節能廚具、食安升級都有補助，加起來一年可以省下 <strong>20 萬元以上</strong>的設備和轉型費用。",
       "subsidies": [
-        { "barColor": "#378ADD", "name": "餐飲數位轉型補助", "how": "導入線上點餐、訂位系統 → ida.gov.tw", "amount": "最高 $20萬" },
-        { "barColor": "#639922", "name": "商業節能設備補助", "how": "更換節能廚具、冷凍設備 → 經濟部", "amount": "依項目不同" },
-        { "barColor": "#D85A30", "name": "食安自主管理補助", "how": "導入 HACCP、ISO → 食藥署", "amount": "最高 $10萬" }
+        { "barColor": "#378ADD", "name": "餐飲數位轉型補助", "how": "導入線上點餐、訂位系統 → ida.gov.tw", "amount": "最高 $20萬", "applyPath": "/apply/digital-transform" },
+        { "barColor": "#639922", "name": "商業節能設備補助", "how": "更換節能廚具、冷凍設備 → 經濟部", "amount": "依項目不同", "applyPath": "/apply/energy-equipment" },
+        { "barColor": "#D85A30", "name": "食安自主管理補助", "how": "導入 HACCP、ISO → 食藥署", "amount": "最高 $10萬", "applyPath": "/apply/food-safety" }
       ]
     },
     "農業": {
       "story": "老闆是農場主，以為補助申請很麻煩。其實農業有最多種類的補助，智慧農業、有機轉型、農產品行銷，加起來一年可以爭取到 <strong>50 萬元以上</strong>。",
       "subsidies": [
-        { "barColor": "#639922", "name": "智慧農業補助", "how": "導入感測、自動化設備 → 農業部", "amount": "最高 $50萬" },
-        { "barColor": "#1D9E75", "name": "有機農業轉型輔導補助", "how": "申請有機認證補助 → 農業改良場", "amount": "最高 $20萬" },
-        { "barColor": "#7F77DD", "name": "農產品行銷補助", "how": "電商、品牌建立 → 農業部", "amount": "最高 $10萬" }
+        { "barColor": "#639922", "name": "智慧農業補助", "how": "導入感測、自動化設備 → 農業部", "amount": "最高 $50萬", "applyPath": "/apply/smart-farming" },
+        { "barColor": "#1D9E75", "name": "有機農業轉型輔導補助", "how": "申請有機認證補助 → 農業改良場", "amount": "最高 $20萬", "applyPath": "/apply/organic-farming" },
+        { "barColor": "#7F77DD", "name": "農產品行銷補助", "how": "電商、品牌建立 → 農業部", "amount": "最高 $10萬", "applyPath": "/apply/farm-marketing" }
       ]
     },
     "生技醫療": {
       "story": "老闆開生技公司，研發費用高，不知道政府補助可以補貼多少研發成本。其實生技是補助最多的產業之一，SBIR 加上科技部計畫，一年可以爭取 <strong>150 萬元以上</strong>。",
       "subsidies": [
-        { "barColor": "#D85A30", "name": "SBIR 生技醫療專案", "how": "生技、醫材、新藥 → sbir.org.tw", "amount": "最高 $200萬/年" },
-        { "barColor": "#7F77DD", "name": "科技部小產學研究計畫", "how": "與大學合作臨床研究 → nstc.gov.tw", "amount": "最高 $50萬" },
-        { "barColor": "#378ADD", "name": "數位醫療補助", "how": "AI 診斷、遠距醫療 → 衛福部、ida.gov.tw", "amount": "最高 $50萬" }
+        { "barColor": "#D85A30", "name": "SBIR 生技醫療專案", "how": "生技、醫材、新藥 → sbir.org.tw", "amount": "最高 $200萬/年", "applyPath": "/apply/sbir" },
+        { "barColor": "#7F77DD", "name": "科技部小產學研究計畫", "how": "與大學合作臨床研究 → nstc.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/nstc-industry-academia" },
+        { "barColor": "#378ADD", "name": "數位醫療補助", "how": "AI 診斷、遠距醫療 → 衛福部、ida.gov.tw", "amount": "最高 $50萬", "applyPath": "/apply/digital-transform" }
       ]
     }
   }
