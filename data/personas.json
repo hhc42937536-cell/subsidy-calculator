@@ -180,5 +180,291 @@
     ],
     "total": { "bg": "#FAEEDA", "labelColor": "#633806", "label": "阿嬤家庭每年可多領 / 省下", "amount": "$126,948+" },
     "chips": ["我家有長者，幫我整理申請方式", "長照 2.0 怎麼申請？"]
+  },
+  {
+    "id": "single_mom",
+    "tab": "淑芬・單親媽媽",
+    "dotColor": "#D4537E",
+    "avatar": { "char": "親", "bg": "#FBEAF0", "color": "#993556" },
+    "name": "淑芬，35 歲，台北市",
+    "tags": [
+      { "text": "單親家庭", "bg": "#FBEAF0", "color": "#72243E" },
+      { "text": "2個小孩", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "租屋中", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "淑芬一人在台北撫養 2 個小孩，租一間套房。她以為只有急難才能申請補助，但光是單親＋租屋＋2 個孩子三項條件疊加，每年補助可達 <strong>24 萬元</strong>以上。",
+    "subsidies": [
+      { "barColor": "#378ADD", "name": "中央租金補貼（有子女加碼 20%）", "how": "租屋、有未成年子女 → 內政部線上申請，台北市最高 $5,000/月再加碼", "amount": "$60,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
+      { "barColor": "#D4537E", "name": "弱勢兒童生活補助", "how": "符合中低收入門檻、有未成年子女 → 戶籍地社會局申請", "amount": "$3,000/孩/月×2孩 = $72,000/年", "amtColor": "#16A34A", "applyPath": "/apply/child-welfare" },
+      { "barColor": "#1D9E75", "name": "托育補助（0–6 歲子女）", "how": "子女送公共／準公共托育機構 → 衛生局造冊，自付 $3,000/月後政府補足", "amount": "最高 $10,000/孩/月", "amtColor": "#16A34A", "applyPath": "/apply/childcare-subsidy" }
+    ],
+    "total": { "bg": "#FBEAF0", "labelColor": "#72243E", "label": "淑芬每年可多領 / 省下", "amount": "$240,000+" },
+    "chips": ["我跟淑芬很像，幫我整理申請方式", "我是單親爸爸，補助一樣嗎"]
+  },
+  {
+    "id": "freelancer",
+    "tab": "宇軒・接案族",
+    "dotColor": "#639922",
+    "avatar": { "char": "案", "bg": "#EAF3DE", "color": "#27500A" },
+    "name": "宇軒，28 歲，台中市",
+    "tags": [
+      { "text": "自由接案", "bg": "#EAF3DE", "color": "#27500A" },
+      { "text": "無勞保", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "租屋中", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "宇軒在台中自由接案，月收不固定，沒有公司替他加保勞保。他以為沒有任何社會保障，但加入職業工會加保＋租金補貼＋數位培訓補助，每年可省下或多拿超過 <strong>8 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#639922", "name": "職業工會加保勞保＋健保", "how": "加入職業工會（如設計師公會）→ 月保費約 $800，取得勞保年資與職傷保障", "amount": "保障價值 $200,000+", "amtColor": "#16A34A", "applyPath": "/apply/union-insurance" },
+      { "barColor": "#378ADD", "name": "中央租金補貼（台中）", "how": "租屋、無自有住宅、所得符合門檻 → 內政部線上申請", "amount": "$48,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
+      { "barColor": "#7F77DD", "name": "數位人才培育補助課程", "how": "勞動部認可訓練課程 → 政府補貼 80% 訓練費", "amount": "省 $20,000–$40,000/次", "amtColor": "#16A34A", "applyPath": "/apply/digital-talent" },
+      { "barColor": "#EF9F27", "name": "薪資所得必要費用扣除（報稅）", "how": "以薪資所得申報接案收入 → 30% 必要費用扣除，5 月申報", "amount": "省稅 $8,000–$15,000/年", "amtColor": "#16A34A", "applyPath": "/apply/freelance-tax" }
+    ],
+    "total": { "bg": "#EAF3DE", "labelColor": "#27500A", "label": "宇軒每年可省下 / 多獲得", "amount": "$80,000+" },
+    "chips": ["我跟宇軒很像，幫我整理申請方式", "我沒有加保，現在可以補嗎"]
+  },
+  {
+    "id": "veteran_youth",
+    "tab": "嘉宏・退伍青年",
+    "dotColor": "#378ADD",
+    "avatar": { "char": "役", "bg": "#E6F1FB", "color": "#185FA5" },
+    "name": "嘉宏，22 歲，高雄市",
+    "tags": [
+      { "text": "剛退伍", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "求職中", "bg": "#FBEAF0", "color": "#72243E" },
+      { "text": "高雄市", "bg": "#EAF3DE", "color": "#27500A" }
+    ],
+    "story": "嘉宏剛退伍，還沒找到工作。他以為退伍後靠自己，但政府有退伍青年專屬職訓加上就業體驗津貼，求職期間最多可獲得超過 <strong>9 萬元</strong>的支援。",
+    "subsidies": [
+      { "barColor": "#378ADD", "name": "公費職業訓練課程（免費）", "how": "退伍後至就業服務站登記求職 → 免費參加政府職訓課程", "amount": "免費（市值 $30,000–$60,000）", "amtColor": "#16A34A", "applyPath": "/apply/vocational-training" },
+      { "barColor": "#7F77DD", "name": "職場學習及再適應計畫", "how": "就服站媒合企業體驗 3 個月 → 每月領 $26,400 津貼", "amount": "$26,400/月×3 = $79,200", "amtColor": "#16A34A", "applyPath": "/apply/workplace-learning" },
+      { "barColor": "#1D9E75", "name": "中央租金補貼（高雄）", "how": "無自有住宅、租屋中 → 內政部線上申請", "amount": "$42,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" }
+    ],
+    "total": { "bg": "#E6F1FB", "labelColor": "#0C447C", "label": "嘉宏求職期間可獲得", "amount": "$90,000+" },
+    "chips": ["我跟嘉宏很像，幫我整理申請方式", "我退伍後已就業，還有哪些補助"]
+  },
+  {
+    "id": "farmer",
+    "tab": "阿福・農民",
+    "dotColor": "#639922",
+    "avatar": { "char": "農", "bg": "#EAF3DE", "color": "#27500A" },
+    "name": "阿福，50 歲，雲林縣",
+    "tags": [
+      { "text": "農民", "bg": "#EAF3DE", "color": "#27500A" },
+      { "text": "有農保", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "農地自耕", "bg": "#FAEEDA", "color": "#633806" }
+    ],
+    "story": "阿福在雲林務農多年，只知道農保有老年給付。但稻作直接補貼、農機設施補助加上農民退休儲金政府配對，每年實際可多領或省下超過 <strong>10 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#639922", "name": "稻作直接給付補貼", "how": "申報種稻、登記農民 → 農業部按公頃核算，每期 $10,500/公頃", "amount": "$21,000/公頃/年（2 期）", "amtColor": "#16A34A", "applyPath": "/apply/rice-subsidy" },
+      { "barColor": "#1D9E75", "name": "農保保費政府補助 70%", "how": "加入農保 → 月自付 $78，政府補貼 $182，享醫療與傷病給付", "amount": "省 $2,184/年（低保費高保障）", "amtColor": "#16A34A", "applyPath": "/apply/farmer-insurance" },
+      { "barColor": "#EF9F27", "name": "農業設施或農機補助", "how": "購置農機、興建溫網室 → 農業部補助 30–50% 費用", "amount": "最高補助 $50,000–$200,000", "amtColor": "#16A34A", "applyPath": "/apply/farm-facility" },
+      { "barColor": "#7F77DD", "name": "農民退休儲金（政府配對）", "how": "每月自存 $1,000–$10,000 → 政府按季等額配對補貼，最高 $10,000/月", "amount": "政府配對最高 $120,000/年", "amtColor": "#16A34A", "applyPath": "/apply/farmer-retirement" }
+    ],
+    "total": { "bg": "#EAF3DE", "labelColor": "#27500A", "label": "阿福每年可多領 / 省下", "amount": "$100,000+" },
+    "chips": ["我跟阿福很像，幫我整理申請方式", "農保老年給付怎麼計算"]
+  },
+  {
+    "id": "nurse",
+    "tab": "美玲・護理師",
+    "dotColor": "#D4537E",
+    "avatar": { "char": "護", "bg": "#FBEAF0", "color": "#993556" },
+    "name": "美玲，30 歲，台北市",
+    "tags": [
+      { "text": "護理師", "bg": "#FBEAF0", "color": "#72243E" },
+      { "text": "有勞保", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "輪三班", "bg": "#EEEDFE", "color": "#3C3489" }
+    ],
+    "story": "美玲在台北某醫院輪三班，月薪 $45,000。她知道工作辛苦卻不知道 2025 年起護理留任夜班獎勵已上路，搭配租金補貼，每年可以多領超過 <strong>15 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#D4537E", "name": "護理人員夜班留任獎勵金", "how": "在職護理師輪班 → 小夜班 $8,000/月、大夜班 $16,000/月，由醫院造冊直接撥付", "amount": "$8,000–$16,000/月", "amtColor": "#16A34A", "applyPath": "/apply/nurse-incentive" },
+      { "barColor": "#378ADD", "name": "中央租金補貼（台北）", "how": "租屋、無自有住宅、所得符合 → 內政部線上申請", "amount": "$54,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
+      { "barColor": "#EF9F27", "name": "輪班夜班費免稅優惠", "how": "輪班夜班津貼部分免納綜所稅 → 5 月申報時列舉扣除", "amount": "省稅 $5,000–$10,000/年", "amtColor": "#16A34A", "applyPath": "/apply/nightshift-tax" }
+    ],
+    "total": { "bg": "#FBEAF0", "labelColor": "#72243E", "label": "美玲每年可多領 / 省下", "amount": "$150,000+" },
+    "chips": ["我跟美玲很像，幫我整理申請方式", "護理留任獎勵如何申請"]
+  },
+  {
+    "id": "pre_retirement",
+    "tab": "建國・準退休",
+    "dotColor": "#7F77DD",
+    "avatar": { "char": "退", "bg": "#EEEDFE", "color": "#534AB7" },
+    "name": "建國，58 歲，新北市",
+    "tags": [
+      { "text": "勞保年資30年", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "距退休2年", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "公司員工", "bg": "#E1F5EE", "color": "#085041" }
+    ],
+    "story": "建國今年 58 歲，在新北工作了 30 年，即將退休。他以為退休靠儲蓄，但勞保月退＋勞退帳戶，每月可穩定領超過 <strong>3 萬元</strong>，而且愈晚退休月領金額愈高。",
+    "subsidies": [
+      { "barColor": "#7F77DD", "name": "勞保老年年金（月退）", "how": "年滿 60 歲、勞保年資 15 年以上 → 向勞保局申請月領", "amount": "約 $20,000–$25,000/月", "amtColor": "#16A34A", "applyPath": "/apply/labor-pension-monthly" },
+      { "barColor": "#378ADD", "name": "勞退新制個人帳戶（一次提領）", "how": "年滿 60 歲 → 向勞保局申請領回帳戶本金＋投資收益", "amount": "累積約 $200,000–$500,000（依薪資年資）", "amtColor": "#16A34A", "applyPath": "/apply/labor-retirement" },
+      { "barColor": "#16A34A", "name": "延後退休年金加給", "how": "繼續工作至 61–65 歲再請領 → 每延 1 年月領金額多加 4%", "amount": "+$800–$1,000/月/年（複利累積）", "amtColor": "#16A34A", "applyPath": "/apply/delayed-retirement" }
+    ],
+    "total": { "bg": "#EEEDFE", "labelColor": "#3C3489", "label": "建國退休後每月可穩定領", "amount": "$30,000+/月" },
+    "chips": ["我跟建國很像，幫我計算退休金", "提早或延後退休哪個划算"]
+  },
+  {
+    "id": "disabled_employed",
+    "tab": "志遠・身障就業",
+    "dotColor": "#378ADD",
+    "avatar": { "char": "就", "bg": "#E6F1FB", "color": "#185FA5" },
+    "name": "志遠，40 歲，台中市",
+    "tags": [
+      { "text": "持身障手冊", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "有穩定工作", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "輕中度障礙", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "志遠持有身障手冊，在台中有正職工作，月薪 $32,000。他以為有工作就領不到補助，但身障特別扣除額＋輔具補助＋就業服務，每年可省下或多拿超過 <strong>8 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#7F77DD", "name": "身心障礙特別扣除額", "how": "年度綜所稅申報 → 每人扣除 $207,000，稅率 12% 省稅約 $24,840", "amount": "省稅 $20,000–$25,000/年", "amtColor": "#16A34A", "applyPath": "/apply/disability-deduction" },
+      { "barColor": "#378ADD", "name": "身障輔具費用補助", "how": "醫師評估需求 → 衛福部依項目補助，助聽器最高 $44,700、輪椅 $24,700", "amount": "依需求最高 $80,000（一次性）", "amtColor": "#16A34A", "applyPath": "/apply/assistive-devices" },
+      { "barColor": "#16A34A", "name": "職業重建及職務再設計服務", "how": "向職業重建中心申請 → 免費職務評量、輔具配置、就業陪伴", "amount": "免費服務（省 $20,000+）", "amtColor": "#16A34A", "applyPath": "/apply/vocational-rehab" },
+      { "barColor": "#EF9F27", "name": "身障停車位申請及交通優惠", "how": "持手冊申請殘障車牌 → 停車費折扣＋大眾運輸優惠", "amount": "省 $3,000–$6,000/年", "amtColor": "#16A34A", "applyPath": "/apply/disability-transport" }
+    ],
+    "total": { "bg": "#E6F1FB", "labelColor": "#0C447C", "label": "志遠每年可省下 / 多獲得", "amount": "$80,000+" },
+    "chips": ["我跟志遠很像，幫我整理申請方式", "身障手冊如何申辦"]
+  },
+  {
+    "id": "vendor",
+    "tab": "阿添・夜市攤販",
+    "dotColor": "#EF9F27",
+    "avatar": { "char": "攤", "bg": "#FAEEDA", "color": "#854F0B" },
+    "name": "阿添，45 歲，台南市",
+    "tags": [
+      { "text": "自營攤販", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "國民年金", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "台南市", "bg": "#EAF3DE", "color": "#27500A" }
+    ],
+    "story": "阿添在台南夜市自營攤位，自繳國民年金。他不知道月銷售額未達 $20 萬依法免徵營業稅，加上攤商設備補助，每年可省下或多拿超過 <strong>5 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#EF9F27", "name": "小規模營業人免徵營業稅", "how": "月均銷售額 ≤ $200,000 → 依法免徵 5% 營業稅，向國稅局登記核定即可", "amount": "省 $60,000–$120,000/年（依營收）", "amtColor": "#16A34A", "applyPath": "/apply/small-business-tax" },
+      { "barColor": "#378ADD", "name": "攤販衛生設備改善補助", "how": "加入攤販公會或自治組織 → 申請設備改善補助", "amount": "最高 $15,000", "amtColor": "#16A34A", "applyPath": "/apply/vendor-equipment" },
+      { "barColor": "#7F77DD", "name": "中高齡微型創業鳳凰計畫", "how": "年滿 45 歲、自營小商 → 補助 $10,000＋低利貸款最高 $100 萬", "amount": "$10,000 補助＋低利貸款", "amtColor": "#16A34A", "applyPath": "/apply/micro-enterprise-phoenix" }
+    ],
+    "total": { "bg": "#FAEEDA", "labelColor": "#633806", "label": "阿添每年可省下 / 多獲得", "amount": "$50,000+" },
+    "chips": ["我跟阿添很像，幫我整理申請方式", "自營業主國民年金怎麼計算"]
+  },
+  {
+    "id": "new_immigrant",
+    "tab": "阿芬・新住民",
+    "dotColor": "#1D9E75",
+    "avatar": { "char": "新", "bg": "#E1F5EE", "color": "#0F6E56" },
+    "name": "阿芬，32 歲，桃園市",
+    "tags": [
+      { "text": "已入籍新住民", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "有小孩", "bg": "#FBEAF0", "color": "#72243E" },
+      { "text": "租屋中", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "阿芬來自東南亞，已入籍取得身份證，在桃園租屋帶 1 歲孩子。她不知道入籍後與一般公民享有相同補助，托育加租屋加新住民專屬服務，每年可達超過 <strong>15 萬元</strong>的支援。",
+    "subsidies": [
+      { "barColor": "#1D9E75", "name": "托育補助（0–2 歲）", "how": "子女送公共／準公共托育 → 衛生局造冊，自付 $3,000/月後政府補足", "amount": "$10,000/月 = $120,000/年", "amtColor": "#16A34A", "applyPath": "/apply/childcare-subsidy" },
+      { "barColor": "#378ADD", "name": "中央租金補貼（桃園）", "how": "租屋、無自有住宅 → 內政部線上申請", "amount": "$48,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
+      { "barColor": "#7F77DD", "name": "新住民家庭服務中心", "how": "持居留證或身份證 → 各縣市新住民服務中心免費服務", "amount": "語言課、法律諮詢、托育資訊（免費）", "amtColor": "#16A34A", "applyPath": "/apply/new-immigrant-service" }
+    ],
+    "total": { "bg": "#E1F5EE", "labelColor": "#085041", "label": "阿芬每年可多領 / 獲得", "amount": "$150,000+" },
+    "chips": ["我跟阿芬很像，幫我整理申請方式", "新住民可以申請低收入補助嗎"]
+  },
+  {
+    "id": "landlord",
+    "tab": "春妹・包租公",
+    "dotColor": "#D85A30",
+    "avatar": { "char": "房", "bg": "#FAECE7", "color": "#993C1D" },
+    "name": "春妹，55 歲，台北市",
+    "tags": [
+      { "text": "出租2間房", "bg": "#FAECE7", "color": "#712B13" },
+      { "text": "台北市", "bg": "#E6F1FB", "color": "#0C447C" },
+      { "text": "公益出租人", "bg": "#EAF3DE", "color": "#27500A" }
+    ],
+    "story": "春妹在台北有 2 間房出租，擔心稅務問題一直不敢正式登記。但只要申請「公益出租人」，房屋稅＋地價稅大幅減免，加上費用扣除率，每年合法省下超過 <strong>8 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#D85A30", "name": "公益出租人房屋稅優惠", "how": "向地方稅務局登記公益出租人 → 非自住稅率 2.4% 降至 1%，2 戶省 $14,000/年", "amount": "省 $14,000+/年", "amtColor": "#16A34A", "applyPath": "/apply/public-landlord" },
+      { "barColor": "#7F77DD", "name": "公益出租人地價稅優惠", "how": "同上登記 → 地價稅率由 10‰ 降至 2‰", "amount": "省 $30,000+/年（視地價）", "amtColor": "#16A34A", "applyPath": "/apply/public-landlord-land" },
+      { "barColor": "#EF9F27", "name": "租賃所得費用率 43% 扣除", "how": "申報租金所得時選費用率扣除 → 不需附收據，43% 免稅", "amount": "省稅 $20,000–$50,000/年（視租金）", "amtColor": "#16A34A", "applyPath": "/apply/rental-income-deduction" },
+      { "barColor": "#16A34A", "name": "老屋翻修改善補助", "how": "屋齡 15 年以上 → 申請都更或老屋改善補助 30–50%", "amount": "最高補助 $100,000", "amtColor": "#16A34A", "applyPath": "/apply/old-house-renovation" }
+    ],
+    "total": { "bg": "#FAECE7", "labelColor": "#712B13", "label": "春妹每年可合法省下", "amount": "$80,000+" },
+    "chips": ["我跟春妹很像，幫我整理省稅方式", "公益出租人要怎麼登記"]
+  },
+  {
+    "id": "new_company",
+    "tab": "柏均・新創公司",
+    "dotColor": "#D85A30",
+    "avatar": { "char": "司", "bg": "#FAECE7", "color": "#993C1D" },
+    "name": "柏均，26 歲，台北市",
+    "tags": [
+      { "text": "公司成立6個月", "bg": "#FAECE7", "color": "#712B13" },
+      { "text": "科技新創", "bg": "#EEEDFE", "color": "#3C3489" },
+      { "text": "需要資金", "bg": "#FAEEDA", "color": "#633806" }
+    ],
+    "story": "柏均剛成立公司 6 個月，有產品但燒錢快。他以為補助要等公司做大，但初創期的 SBIR 研發補助＋中信保貸款＋研發稅額抵減，2 年內可取得超過 <strong>200 萬元</strong>的資金支援。",
+    "subsidies": [
+      { "barColor": "#D85A30", "name": "SBIR 中小企業研發補助", "how": "成立未滿 5 年、有技術研發計畫 → 申請 Phase 1 補助 50%，最高 $150 萬", "amount": "最高 $1,500,000（不還款）", "amtColor": "#16A34A", "applyPath": "/apply/sbir" },
+      { "barColor": "#7F77DD", "name": "中小企業信保基金保證貸款", "how": "向銀行申請＋信保基金擔保 → 免不動產擔品，最高貸款 $500 萬", "amount": "最高 $5,000,000 貸款", "amtColor": "#16A34A", "applyPath": "/apply/sme-credit-guarantee" },
+      { "barColor": "#16A34A", "name": "研發投資抵減（R&D Tax Credit）", "how": "研發費用及員工薪資×15% 抵減所得稅 → 年度申報", "amount": "省稅 $50,000–$200,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rd-tax-credit" }
+    ],
+    "total": { "bg": "#FAECE7", "labelColor": "#712B13", "label": "柏均 2 年內可獲得的資源", "amount": "$2,000,000+" },
+    "chips": ["我跟柏均很像，幫我整理申請方式", "SBIR 怎麼申請，需要什麼資料"]
+  },
+  {
+    "id": "midcareer",
+    "tab": "雅惠・中年轉職",
+    "dotColor": "#7F77DD",
+    "avatar": { "char": "轉", "bg": "#EEEDFE", "color": "#534AB7" },
+    "name": "雅惠，45 歲，新竹市",
+    "tags": [
+      { "text": "中高齡", "bg": "#EAF3DE", "color": "#27500A" },
+      { "text": "剛離職", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "自費進修中", "bg": "#EEEDFE", "color": "#3C3489" }
+    ],
+    "story": "雅惠 45 歲主動離職，打算進修轉換跑道。她以為自願離職什麼都沒有，但只要參加全日制職訓就能領生活津貼，加上免費課程＋再就業補助，轉職空窗期最多可獲得超過 <strong>20 萬元</strong>的支援。",
+    "subsidies": [
+      { "barColor": "#7F77DD", "name": "職業訓練生活津貼（全日制）", "how": "報名政府認可全日制訓練課程 → 即使自願離職仍可申領，月領投保薪資 60%", "amount": "$24,000/月×6 個月 = $144,000", "amtColor": "#16A34A", "applyPath": "/apply/vocational-training" },
+      { "barColor": "#639922", "name": "公費職業訓練課程（免費）", "how": "至就業服務站登記 → 免費參加數位行銷、AI、設計等課程", "amount": "免費（市值 $30,000–$80,000）", "amtColor": "#16A34A", "applyPath": "/apply/public-training" },
+      { "barColor": "#EF9F27", "name": "中高齡再就業補助", "how": "45 歲以上再就業、穩定工作滿 3 個月 → 就服站申請一次性補助", "amount": "最高 $40,000（一次性）", "amtColor": "#16A34A", "applyPath": "/apply/midage-reemployment" }
+    ],
+    "total": { "bg": "#EEEDFE", "labelColor": "#3C3489", "label": "雅惠轉職期間可獲得", "amount": "$200,000+" },
+    "chips": ["我跟雅惠很像，幫我整理申請方式", "自願離職可以領哪些補助"]
+  },
+  {
+    "id": "lowincome_kids",
+    "tab": "阿珠・低收4口",
+    "dotColor": "#EF9F27",
+    "avatar": { "char": "育", "bg": "#FAEEDA", "color": "#854F0B" },
+    "name": "阿珠，38 歲，高雄市（全家 4 口）",
+    "tags": [
+      { "text": "低收入戶", "bg": "#FAEEDA", "color": "#633806" },
+      { "text": "2子女在學", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "全家4口", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "阿珠一家四口在高雄通過低收入戶認定，有 2 個在學孩子。她只申請了生活扶助，不知道孩子發展帳戶、學費補助加上健保全免，全部合計每年可獲得超過 <strong>50 萬元</strong>的現金與服務。",
+    "subsidies": [
+      { "barColor": "#EF9F27", "name": "低收入戶生活扶助", "how": "全家收入符合標準 → 戶籍地區公所申請", "amount": "$13,688/人/月（4 口合計）", "amtColor": "#16A34A", "applyPath": "/apply/living-assistance" },
+      { "barColor": "#1D9E75", "name": "兒童未來教育及發展帳戶（CWID）", "how": "低收入或中低收入子女 → 政府每月存 $1,250/子女，家長配對存款同額加碼", "amount": "$1,250×2孩×12 = $30,000/年", "amtColor": "#16A34A", "applyPath": "/apply/cwid" },
+      { "barColor": "#7F77DD", "name": "低收入戶子女就學補助", "how": "子女就讀國中至大學 → 學校學務處辦理，學費全免＋助學金", "amount": "學費全免＋$20,000–$30,000/孩/年", "amtColor": "#16A34A", "applyPath": "/apply/low-income-education" },
+      { "barColor": "#378ADD", "name": "健保費全額補助", "how": "低收入戶全家 → 健保費由政府全額負擔，不需繳任何保費", "amount": "省 $24,000/年（4 口）", "amtColor": "#16A34A", "applyPath": "/apply/health-insurance-subsidy" }
+    ],
+    "total": { "bg": "#FAEEDA", "labelColor": "#633806", "label": "阿珠家庭每年可獲得的補助", "amount": "$500,000+" },
+    "chips": ["我家符合低收入戶，子女補助怎麼申請", "中低收入和低收入差在哪裡"]
+  },
+  {
+    "id": "indigenous_youth",
+    "tab": "曉文・原民青年",
+    "dotColor": "#1D9E75",
+    "avatar": { "char": "原", "bg": "#E1F5EE", "color": "#0F6E56" },
+    "name": "曉文，24 歲，花蓮縣",
+    "tags": [
+      { "text": "原住民身份", "bg": "#E1F5EE", "color": "#085041" },
+      { "text": "剛就業", "bg": "#EAF3DE", "color": "#27500A" },
+      { "text": "花蓮在地", "bg": "#E6F1FB", "color": "#0C447C" }
+    ],
+    "story": "曉文在花蓮剛找到第一份工作，月薪 $28,000。她以為原住民補助只有學生期間才有，但就業後還有租屋補貼、稅務免稅加成和原民委員會就業獎勵，每年可多領或省下超過 <strong>7 萬元</strong>。",
+    "subsidies": [
+      { "barColor": "#1D9E75", "name": "原住民族所得稅免稅額加成 50%", "how": "5 月報稅時 → 一般免稅額 $97,000 再加 50%（$145,500），依稅率省稅", "amount": "省稅 $5,000–$8,000/年", "amtColor": "#16A34A", "applyPath": "/apply/indigenous-tax" },
+      { "barColor": "#378ADD", "name": "中央租金補貼（花蓮）", "how": "租屋、無自有住宅 → 內政部線上申請，一般縣市最高 $3,500/月", "amount": "$42,000/年", "amtColor": "#16A34A", "applyPath": "/apply/rent-subsidy" },
+      { "barColor": "#7F77DD", "name": "原民會就業穩定補助", "how": "就業後向原民會申請 → 穩定就業獎勵金", "amount": "$15,000（一次性）", "amtColor": "#16A34A", "applyPath": "/apply/indigenous-employment" },
+      { "barColor": "#EF9F27", "name": "原住民自用住宅低利貸款（購屋時）", "how": "符合原住民身份 → 申請利率 1.5% 低利貸款，年省利息", "amount": "省利息約 $20,000/年（$200 萬貸款試算）", "amtColor": "#16A34A", "applyPath": "/apply/indigenous-housing" }
+    ],
+    "total": { "bg": "#E1F5EE", "labelColor": "#085041", "label": "曉文每年可多領 / 省下", "amount": "$70,000+" },
+    "chips": ["我跟曉文很像，幫我整理申請方式", "原住民就業補助要去哪裡申請"]
   }
 ]
