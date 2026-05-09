@@ -2,162 +2,149 @@
 
 import Link from "next/link"
 
-const AVATAR_PREVIEW = [
-  { bg: "#7F77DD", char: "學" },
-  { bg: "#378ADD", char: "勞" },
-  { bg: "#1D9E75", char: "媽" },
-]
-
 const MOCKUP_SUBSIDIES = [
-  { color: "#16A34A", name: "中央生育給付 PLUS（2026 新制）", how: "每胎保底，不分投保 → 勞保局線上申請", amount: "$100,000" },
-  { color: "#7F77DD", name: "台中市生育津貼", how: "設籍台中、連續滿半年 → 戶籍地區公所", amount: "$20,000" },
-  { color: "#D4537E", name: "婚育租屋加碼（2026 新制）", how: "結婚未滿 2 年、租屋中 → 租金補貼加碼 50%", amount: "$36,000/年" },
+  { icon: "🏠", color: "#3B82F6", name: "中央租金補貼專案", dept: "內政部", amount: "$54,000/年" },
+  { icon: "💼", color: "#10B981", name: "青年就業獎勵金", dept: "勞動部", amount: "$20,000" },
+  { icon: "💻", color: "#8B5CF6", name: "數位發展部數位學習補助", dept: "數位發展部", amount: "$6,000/年" },
 ]
 
 export default function HeroSection() {
   return (
-    <>
-      <section style={{ background: "linear-gradient(135deg, #0F172A 0%, #111827 100%)", padding: "4rem 1.5rem 3.5rem" }}>
-        <div className="section-wrap">
-          <div className="hero-grid">
+    <section style={{ background: "#FAFDF7", padding: "5rem 1.5rem 4.5rem", position: "relative", overflow: "hidden" }}>
+      {/* Decorative stars */}
+      <span style={{ position: "absolute", top: "2.5rem", left: "8%", fontSize: "22px", color: "#F59E0B", opacity: 0.7, pointerEvents: "none" }}>✦</span>
+      <span style={{ position: "absolute", top: "7rem", right: "12%", fontSize: "14px", color: "#10B981", opacity: 0.5, pointerEvents: "none" }}>✦</span>
+      <span style={{ position: "absolute", bottom: "3rem", left: "4%", fontSize: "16px", color: "#F59E0B", opacity: 0.4, pointerEvents: "none" }}>✦</span>
+      <span style={{ position: "absolute", bottom: "5rem", right: "6%", fontSize: "20px", color: "#A78BFA", opacity: 0.35, pointerEvents: "none" }}>✦</span>
 
-            {/* ── Left ── */}
-            <div>
-              <div style={{
-                display: "inline-flex", alignItems: "center", gap: "7px",
-                background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.3)",
-                borderRadius: "20px", padding: "5px 14px", marginBottom: "1.5rem",
-              }}>
-                <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#10B981", display: "inline-block" }} />
-                <span style={{ fontSize: "12px", color: "#10B981", fontWeight: 500 }}>政府公開資料 × 每季同步更新</span>
-              </div>
+      <div className="section-wrap">
+        <div className="hero-grid">
 
-              <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "#F8FAFC", lineHeight: 1.2, marginBottom: "1rem", letterSpacing: "-0.04em" }}>
-                找出你可能錯過的<br />政府補助
-              </h1>
-              <p style={{ fontSize: "15px", color: "#94A3B8", lineHeight: 1.8, marginBottom: "2rem", maxWidth: "420px" }}>
-                根據政府公開政策資料，快速比對你的身份、收入、居住狀態與家庭條件，估算每年可申請的補助與節稅金額。
-              </p>
-
-              {/* CTA */}
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
-                <Link href="/calculator" style={{
-                  background: "#10B981",
-                  color: "white",
-                  borderRadius: "12px",
-                  padding: "0 28px",
-                  height: "52px",
-                  fontSize: "15px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  letterSpacing: "-0.01em",
-                  whiteSpace: "nowrap",
-                  boxShadow: "0 4px 20px rgba(16,185,129,0.35)",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                }}>
-                  開始試算我的補助 →
-                </Link>
-                <a href="#personas" style={{
-                  color: "#94A3B8",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                  padding: "0 16px",
-                  height: "52px",
-                  display: "flex",
-                  alignItems: "center",
-                  border: "1px solid rgba(148,163,184,0.25)",
-                  borderRadius: "12px",
-                  whiteSpace: "nowrap",
-                  transition: "color .15s, border-color .15s",
-                }}>
-                  查看常見情境
-                </a>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <div style={{ display: "flex" }}>
-                    {AVATAR_PREVIEW.map((a, i) => (
-                      <div key={i} style={{
-                        width: "28px", height: "28px", borderRadius: "50%",
-                        background: a.bg, border: "2px solid #1E293B",
-                        marginLeft: i === 0 ? 0 : "-8px",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        fontSize: "10px", color: "white", fontWeight: 600,
-                      }}>{a.char}</div>
-                    ))}
-                  </div>
-                  <span style={{ fontSize: "13px", color: "#64748B" }}>已有 126,842 人試算</span>
-                </div>
+          {/* ── Left ── */}
+          <div>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: "7px",
+              background: "#F0FDF4", border: "1px solid #BBF7D0",
+              borderRadius: "20px", padding: "5px 14px", marginBottom: "1.5rem",
+            }}>
+              <span style={{ color: "#F59E0B", fontSize: "13px" }}>✦</span>
+              <span style={{ fontSize: "12px", color: "#065F46", fontWeight: 500 }}>政府公開資料 × 精準比對</span>
             </div>
 
-            {/* ── Right: mockup card ── */}
-            <div className="hero-mockup-col">
-              <div style={{
-                background: "#FFFFFF",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "20px",
-                padding: "1.5rem",
-                boxShadow: "0 24px 64px rgba(0,0,0,0.4)",
+            <h1 style={{ fontSize: "clamp(30px, 4vw, 52px)", fontWeight: 800, color: "#0F172A", lineHeight: 1.15, marginBottom: "1rem", letterSpacing: "-0.04em" }}>
+              找出你可能錯過的<br />
+              <span style={{ color: "#16A34A" }}>政府補助</span>
+            </h1>
+            <p style={{ fontSize: "15px", color: "#64748B", lineHeight: 1.8, marginBottom: "2rem", maxWidth: "420px" }}>
+              根據公開政策資料，快速比對你的身份、收入、居住狀態與家庭條件，估算每年可申請的補助與節稅金額。
+            </p>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+              <Link href="/calculator" style={{
+                background: "#0F172A",
+                color: "white",
+                borderRadius: "12px",
+                padding: "0 28px",
+                height: "52px",
+                fontSize: "15px",
+                fontWeight: 700,
+                letterSpacing: "-0.01em",
+                whiteSpace: "nowrap",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
               }}>
-                {/* Card header */}
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.25rem" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#E1F5EE", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#0F6E56", fontWeight: 700 }}>媽</div>
-                    <div>
-                      <div style={{ fontSize: "12px", color: "#94A3B8" }}>試算結果</div>
-                      <div style={{ fontSize: "14px", fontWeight: 600, color: "#0F172A" }}>佳佳・新手媽媽・台中市</div>
-                    </div>
-                  </div>
-                  <span style={{ background: "#ECFDF5", color: "#047857", fontSize: "11px", fontWeight: 600, padding: "4px 10px", borderRadius: "8px", border: "1px solid #D1FAE5" }}>符合資格</span>
-                </div>
-
-                {/* Subsidy items */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "1rem" }}>
-                  {MOCKUP_SUBSIDIES.map(sub => (
-                    <div key={sub.name} style={{
-                      display: "flex", alignItems: "center", gap: "12px",
-                      padding: "10px 12px", background: "#F8FAFC",
-                      border: "1px solid #E2E8F0", borderRadius: "10px",
-                    }}>
-                      <div style={{
-                        width: "32px", height: "32px", borderRadius: "8px",
-                        background: sub.color + "18", border: `1px solid ${sub.color}30`,
-                        display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-                      }}>
-                        <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: sub.color }} />
-                      </div>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontSize: "13px", fontWeight: 500, color: "#0F172A" }}>{sub.name}</div>
-                        <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "1px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{sub.how}</div>
-                      </div>
-                      <div style={{ fontSize: "13px", fontWeight: 700, color: "#059669", whiteSpace: "nowrap", flexShrink: 0 }} className="tabular">{sub.amount}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Total */}
-                <div style={{
-                  display: "flex", alignItems: "center", justifyContent: "space-between",
-                  padding: "14px 16px", background: "#E1F5EE", borderRadius: "12px",
-                  border: "1px solid #A7F3D0", marginBottom: "1rem",
-                }}>
-                  <span style={{ fontSize: "13px", fontWeight: 500, color: "#065F46" }}>佳佳第一年可多領 / 省下</span>
-                  <span style={{ fontSize: "26px", fontWeight: 800, color: "#047857", letterSpacing: "-0.04em" }} className="tabular">$156,000+</span>
-                </div>
-
-                {/* Source badge */}
-                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                  <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#10B981", display: "inline-block" }} />
-                  <span style={{ fontSize: "11px", color: "#94A3B8" }}>資料來源：勞動部、內政部、地方政府公告</span>
-                </div>
-              </div>
+                開始試算我的補助 →
+              </Link>
+              <a href="#personas" style={{
+                color: "#475569",
+                fontSize: "14px",
+                fontWeight: 500,
+                textDecoration: "none",
+                padding: "0 20px",
+                height: "52px",
+                display: "flex",
+                alignItems: "center",
+                border: "1.5px solid #D1D5DB",
+                borderRadius: "12px",
+                background: "white",
+                whiteSpace: "nowrap",
+              }}>
+                查看常見情境
+              </a>
             </div>
 
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <div style={{ display: "flex" }}>
+                {[
+                  { bg: "#7F77DD", char: "學" },
+                  { bg: "#378ADD", char: "勞" },
+                  { bg: "#1D9E75", char: "媽" },
+                ].map((a, i) => (
+                  <div key={i} style={{
+                    width: "28px", height: "28px", borderRadius: "50%",
+                    background: a.bg, border: "2px solid #FAFDF7",
+                    marginLeft: i === 0 ? 0 : "-8px",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: "10px", color: "white", fontWeight: 600,
+                  }}>{a.char}</div>
+                ))}
+              </div>
+              <span style={{ fontSize: "13px", color: "#94A3B8" }}>已有 128,842 人試算</span>
+            </div>
           </div>
+
+          {/* ── Right: mockup card ── */}
+          <div className="hero-mockup-col">
+            <div style={{
+              background: "#FFFFFF",
+              border: "1px solid #E2E8F0",
+              borderRadius: "20px",
+              padding: "1.5rem",
+              boxShadow: "0 8px 40px rgba(15,23,42,0.1)",
+            }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.25rem" }}>
+                <div style={{ fontSize: "16px", fontWeight: 700, color: "#0F172A" }}>
+                  <span style={{ color: "#F59E0B" }}>✦</span> 試算結果
+                </div>
+                <span style={{ background: "#ECFDF5", color: "#047857", fontSize: "12px", fontWeight: 600, padding: "4px 12px", borderRadius: "8px", border: "1px solid #D1FAE5" }}>符合資格 3 項</span>
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "1rem" }}>
+                {MOCKUP_SUBSIDIES.map(sub => (
+                  <div key={sub.name} style={{
+                    display: "flex", alignItems: "center", gap: "10px",
+                    padding: "10px 12px", background: "#F8FAFC",
+                    border: "1px solid #F1F5F9", borderRadius: "10px",
+                  }}>
+                    <div style={{
+                      width: "36px", height: "36px", borderRadius: "8px",
+                      background: sub.color + "15",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: "18px", flexShrink: 0,
+                    }}>{sub.icon}</div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: "13px", fontWeight: 500, color: "#0F172A", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{sub.name}</div>
+                      <div style={{ fontSize: "11px", color: "#94A3B8" }}>{sub.dept}</div>
+                    </div>
+                    <div style={{ fontSize: "14px", fontWeight: 700, color: "#059669", flexShrink: 0 }} className="tabular">{sub.amount}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{
+                display: "flex", alignItems: "center", justifyContent: "space-between",
+                padding: "14px 16px", background: "#F0FDF4", borderRadius: "12px",
+                border: "1px solid #BBF7D0",
+              }}>
+                <span style={{ fontSize: "13px", color: "#065F46", fontWeight: 500 }}>小雅每年可領 / 省下</span>
+                <span style={{ fontSize: "26px", fontWeight: 800, color: "#047857", letterSpacing: "-0.04em" }} className="tabular">$80,000+</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

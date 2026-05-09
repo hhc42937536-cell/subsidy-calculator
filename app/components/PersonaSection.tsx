@@ -14,6 +14,19 @@ const PERSONA_CATEGORY: Record<string, string> = {
   disabled: "身障", lowincome: "低收入", startup: "創業",
 }
 
+const PERSONA_CHAR: Record<string, { emoji: string; bg: string; subtitle: string }> = {
+  student:    { emoji: "🧑‍🎓", bg: "#EEF2FF", subtitle: "教育，就學優惠" },
+  worker:     { emoji: "🧑‍💼", bg: "#EFF6FF", subtitle: "就業，稅務，通勤" },
+  newparent:  { emoji: "👩‍🍼", bg: "#F0FDF4", subtitle: "育兒，津貼，托育" },
+  renter:     { emoji: "🏡", bg: "#FFF7ED", subtitle: "租金，搬家，生活" },
+  unemployed: { emoji: "🔍", bg: "#F0F9FF", subtitle: "失業，急難，轉職" },
+  disabled:   { emoji: "🧑‍🦽", bg: "#FAF5FF", subtitle: "身障，醫療，照護" },
+  lowincome:  { emoji: "⭐", bg: "#FFFBEB", subtitle: "低收，救助，福利" },
+  startup:    { emoji: "🚀", bg: "#FFF1F2", subtitle: "創業，研發，補貼" },
+  elder:      { emoji: "👴", bg: "#FEFCE8", subtitle: "長照，醫療，敬老" },
+  owner:      { emoji: "🏪", bg: "#FFF7ED", subtitle: "創業，貸款，稅務" },
+}
+
 const ALL_PERSONAS = [
   ...personas.map(p => ({
     id: p.id as PersonaId,
@@ -75,59 +88,80 @@ export default function PersonaSection() {
     : persona!.tags
 
   return (
-    <section id="personas" style={{ padding: "4rem 1.5rem", background: "#F8FAFC" }}>
+    <section id="personas" style={{ padding: "4rem 1.5rem", background: "#fff" }}>
       <div className="section-wrap">
 
         {/* Section header */}
         <div style={{ marginBottom: "2.5rem" }}>
-          <div style={{ fontSize: "12px", fontWeight: 600, color: "#10B981", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem" }}>補助情境</div>
+          <div style={{ fontSize: "12px", fontWeight: 600, color: "#16A34A", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem" }}>情境情境</div>
           <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 700, color: "#0F172A", letterSpacing: "-0.03em", marginBottom: "0.5rem" }}>
-            選一個跟你最像的情境
+            看看誰跟你最像
           </h2>
-          <p style={{ fontSize: "15px", color: "#64748B" }}>點選後查看詳細試算結果</p>
+          <p style={{ fontSize: "15px", color: "#64748B" }}>選擇接近你的生活情境，快速理解可能符合的補助。</p>
         </div>
 
         {/* Persona grid */}
         <div className="persona-grid" style={{ marginBottom: "2.5rem" }}>
-          {ALL_PERSONAS.map(p => (
-            <button
-              key={p.id}
-              className={`persona-card${selected === p.id ? " selected" : ""}`}
-              onClick={() => setSelected(p.id)}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
-                <div style={{ width: "38px", height: "38px", borderRadius: "50%", background: p.avatar.bg, color: p.avatar.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", fontWeight: 700, flexShrink: 0 }}>{p.avatar.char}</div>
-                <div>
-                  <div style={{ fontSize: "13px", fontWeight: 600, color: "#0F172A" }}>{p.tab}</div>
-                  <CategoryBadge label={p.category} />
+          {ALL_PERSONAS.map(p => {
+            const char = PERSONA_CHAR[p.id] ?? { emoji: "🧑", bg: "#F1F5F9", subtitle: "" }
+            return (
+              <button
+                key={p.id}
+                className={`persona-card${selected === p.id ? " selected" : ""}`}
+                onClick={() => setSelected(p.id)}
+              >
+                {/* Character image area */}
+                <div style={{
+                  height: "88px", borderRadius: "10px", background: char.bg,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "52px", marginBottom: "0.875rem",
+                }}>{char.emoji}</div>
+                <div style={{ fontSize: "15px", fontWeight: 700, color: "#0F172A", marginBottom: "4px" }}>
+                  {p.tab.split("・")[1] ?? p.tab}
                 </div>
-              </div>
-              <div style={{ fontSize: "12px", color: "#64748B", marginBottom: "0.75rem", lineHeight: 1.5 }}>{p.name}</div>
-              <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
-                <span style={{ fontSize: "20px", fontWeight: 800, color: "#047857", letterSpacing: "-0.03em" }} className="tabular">{p.total.amount}</span>
-                <span style={{ fontSize: "11px", color: "#94A3B8" }}>/ 年</span>
-              </div>
-            </button>
-          ))}
+                <div style={{ fontSize: "12px", color: "#64748B", marginBottom: "0.625rem" }}>{char.subtitle}</div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 800, color: "#16A34A", letterSpacing: "-0.03em" }} className="tabular">{p.total.amount}</span>
+                  <span style={{ fontSize: "11px", color: "#94A3B8" }}>/ 年</span>
+                </div>
+              </button>
+            )
+          })}
 
           {/* Owner card */}
-          <button
-            className={`persona-card${selected === "owner" ? " selected" : ""}`}
-            onClick={() => setSelected("owner")}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
-              <div style={{ width: "38px", height: "38px", borderRadius: "50%", background: ownerData.avatar.bg, color: ownerData.avatar.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", fontWeight: 700, flexShrink: 0 }}>{ownerData.avatar.char}</div>
-              <div>
-                <div style={{ fontSize: "13px", fontWeight: 600, color: "#0F172A" }}>{ownerData.tab}</div>
-                <CategoryBadge label="企業主" />
-              </div>
-            </div>
-            <div style={{ fontSize: "12px", color: "#64748B", marginBottom: "0.75rem", lineHeight: 1.5 }}>小企業主 / 老闆</div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
-              <span style={{ fontSize: "20px", fontWeight: 800, color: "#047857", letterSpacing: "-0.03em" }} className="tabular">{ownerData.total.amount}</span>
-              <span style={{ fontSize: "11px", color: "#94A3B8" }}>/ 年</span>
-            </div>
-          </button>
+          {(() => {
+            const char = PERSONA_CHAR["owner"]!
+            return (
+              <button
+                className={`persona-card${selected === "owner" ? " selected" : ""}`}
+                onClick={() => setSelected("owner")}
+              >
+                <div style={{
+                  height: "88px", borderRadius: "10px", background: char.bg,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "52px", marginBottom: "0.875rem",
+                }}>{char.emoji}</div>
+                <div style={{ fontSize: "15px", fontWeight: 700, color: "#0F172A", marginBottom: "4px" }}>小企業主</div>
+                <div style={{ fontSize: "12px", color: "#64748B", marginBottom: "0.625rem" }}>{char.subtitle}</div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "4px" }}>
+                  <span style={{ fontSize: "20px", fontWeight: 800, color: "#16A34A", letterSpacing: "-0.03em" }} className="tabular">{ownerData.total.amount}</span>
+                  <span style={{ fontSize: "11px", color: "#94A3B8" }}>/ 年</span>
+                </div>
+              </button>
+            )
+          })()}
+        </div>
+
+        {/* 查看更多按鈕 */}
+        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+          <a href="#personas-detail" style={{
+            display: "inline-flex", alignItems: "center", gap: "6px",
+            padding: "10px 24px", border: "1.5px solid #E2E8F0",
+            borderRadius: "24px", fontSize: "14px", fontWeight: 500,
+            color: "#475569", background: "#fff", textDecoration: "none",
+          }}>
+            查看更多情境 ↓
+          </a>
         </div>
 
         {/* Results dashboard */}

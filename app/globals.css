@@ -48,7 +48,7 @@ body {
 }
 
 /* ── Trust bar ── */
-.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
 @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
 
 /* ── Persona grid ── */
@@ -87,7 +87,11 @@ body {
 /* ── Data sources ── */
 .ds-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
 @media (min-width: 640px) { .ds-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 900px) { .ds-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 900px) { .ds-grid { grid-template-columns: repeat(6, 1fr); } }
+
+/* ── Example section ── */
+.example-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .example-grid { grid-template-columns: 1fr 1fr; } }
 
 /* ── Numeric amounts ── */
 .tabular { font-variant-numeric: tabular-nums; }
