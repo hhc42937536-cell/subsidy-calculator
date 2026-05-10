@@ -202,13 +202,18 @@ async function handleEvent(event: Record<string, unknown>) {
 // ── Webhook 入口 ─────────────────────────────────────────────────
 export async function POST(req: Request) {
   const body = await req.text()
-  const signature = req.headers.get("x-line-signature") ?? ""
 
+  const { events } = JSON.parse(body) as { events: Record<string, unknown>[] }
+
+  // LINE Verify 送空 events，直接回 200
+  if (events.length === 0) {
+    return new Response("OK")
+  }
+
+  const signature = req.headers.get("x-line-signature") ?? ""
   if (!validateSignature(body, signature)) {
     return new Response("Unauthorized", { status: 401 })
   }
-
-  const { events } = JSON.parse(body) as { events: Record<string, unknown>[] }
 
   await Promise.all(events.map(handleEvent))
 
